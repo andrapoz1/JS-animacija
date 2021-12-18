@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+
+    <div id="my-div"></div>
+<script>
+let body = document.getElementById("body");
+        let myDiv = document.getElementById("my-div");
+ 
+        let direction = +1;
+        let speed = 8;
+ 
+        function update() {
+ 
+            bodyBounds = body.getBoundingClientRect();
+            myDivBounds = myDiv.getBoundingClientRect();
+ 
+            myDiv.style.transform = "translateY(" + (myDivBounds.top + direction * speed) + "px)";
+ 
+            if (myDivBounds.bottom > bodyBounds.bottom - 2*speed) {
+                direction = -1;
+            } else if (myDivBounds.top < bodyBounds.top + 2*speed) {
+                direction = 1;
+            }
+        }
+
+     setInterval(update, 17);
+
+</script>
+
+</body>
+</html>

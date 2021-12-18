@@ -1,0 +1,12 @@
+body{
+    margin:0px;
+    height: 100vh;
+    background-color: rgb(36, 35, 35);
+}
+#my-div{
+    border-radius: 50%;
+    background-color:rgb(103, 103, 179) ;
+    height: 220px;
+    width: 220px;
+    margin: 0px auto;
+}
